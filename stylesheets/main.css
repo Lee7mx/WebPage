@@ -5,11 +5,37 @@
     margin: 0;
     padding: 0;
 }
-header{
+header {
     text-align: center;
     height: 400px;
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
+    height: 400px;
+}
+header .banner {
+    position: relative;
+    height: 200px;
+    width: 100%;
+}
+header .banner .logo {
+    float: left;
+    padding-left: 15%;
+}
+.media {
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+}
+header .banner .media figure {
+    text-align: center;
+    position: relative;
+    left: 600px;
+    width: 50px;  
+    padding: 0 5%;
+    padding-top: 45px;
+}
+header .banner figure img {
+    width: 50px;
 }
 header nav {
     background-color: rgb(7, 6, 31);
@@ -34,45 +60,144 @@ nav ul li a {
 nav ul li a:hover {
     color: rgba(5, 121, 5, 0.87);
 }
-.image {   
-    position: relative;
-    height: 350px;
-    z-index: 1;
-}
-.image:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    background-image: url("../images/hero.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.6;
-}
-.text {
-    color: black;
-    position: relative;
-}
-
-.title {
-    color: black;
-    padding: 160px 0 0 20px;
-    font-weight: 500;
-    font-size: 20px;
-    text-align: left;
-    text-shadow: white 0px 0px 2px;
-}
-
-/* RESPONSIVE RULES */
-@media screen and (max-width: 862px) {
-
-}
 
 
+/* HEADER RESPONSIVE RULES */
+@media screen and (max-width: 1000px) {
+    header {
+        height: 450px;
+    }
+    header .banner .logo {
+        padding-left: 12%;
+    }
+}
+@media screen and (max-width: 830px) {
+    header {
+        height: 450px;
+    }
+    header .banner .logo {
+        padding-left: 10%;
+    }
+}
+@media screen and (max-width: 750px) {
+    header {
+        height: 450px;
+    }
+    header .banner .logo {
+        padding-left: 7%;
+    }
+    header .banner .media figure{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+@media screen and (max-width: 565px) {
+    header {
+        height: 450px;
+    }
+    header .banner .logo {
+        padding-left: 10%;
+    }
+    header .banner .media {
+        position: relative;
+        top: 50px;
+    }
+    header .banner .media figure {
+        position: relative;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    header .banner .media figure img {
+        width: 35px;
+    }
+}
+@media screen and (max-width: 565px) {
+    header {
+        height: 450px;
+    }
+    header .banner .logo {
+        padding-left: 7%;
+    }
+    header .banner .media {
+        position: relative;
+        top: 50px;
+    }
+    header .banner .media figure {
+        position: relative;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    header .banner .media figure img {
+        width: 35px;
+    }
+}
+@media screen and (max-width: 465px) {
+    header {
+        height: 450px;
+    }
+    nav ul li{
+        padding: 0 30px;
+    }
+    header .banner .logo {
+        padding-left: 4%;
+    }
+    header .banner .media {
+        position: relative;
+        top: 50px;
+    }
+    header .banner .media figure {
+        position: relative;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    header .banner .media figure img {
+        width: 35px;
+    }
+}
+@media screen and (max-width: 437px) {
+    header {
+        height: 450px;
+    }
+    nav ul li{
+        padding: 0 30px;
+    }
+    header .banner .logo {
+        padding-left: 2%;
+    }
+    header .banner .media {
+        position: relative;
+        top: 50px;
+    }
+    header .banner .media figure {
+        position: relative;
+        padding: 5px 5px;
+    }
+    header .banner .media figure img {
+        width: 35px;
+    }
+}
+@media screen and (max-width: 405px) {
+    header {
+        height: 500px;
+    }
+    nav ul li{
+        padding: 0 25px;
+    }
+    header .banner .logo {
+        padding-left: 2%;
+    }
+    header .banner .media {
+        position: relative;
+        top: 50px;
+    }
+    header .banner .media figure {
+        position: relative;
+        padding: 5px 5px;
+    }
+    header .banner .media figure img {
+        width: 35px;
+    }
+}
 /* FEATURES */
 .features {
     background: white;
