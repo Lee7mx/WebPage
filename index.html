@@ -1,56 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Eden's Natural Market & Greenhouse</title>
-        <link rel="stylesheet" href="stylesheets/main.css">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="location.html">Location</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="banner">
-                <div class = "logo">
-                    <img src="images/logo1.png" alt="Eden's Natural Market & Greenhouse Logo">
+<html>
+<head>
+    <meta charset=""utf-8" />
+    <title>Page Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Home</a>
                 </div>
-                <div class="media">              
-                    <figure>
-                        <img src="images/facebook.png" alt="facebook link">
-                    </figure>
-                    <figure>
-                        <img src="images/twitter.png" alt="twitter link">
-                    </figure>
-                    <figure>
-                        <img src="images/instagram.png" alt="instagram link">
-                    </figure>
-                </div> 
-            </div>   
-        </header>
-        <section class="features">
-            <figure>
-                <img src="images/foods.jpg" alt="Large Selection of Natural Foods">
-                <figcaption>Natural Foods</figcaption>
-            </figure>
-            <figure>
-                <img src="images/supplements.jpg" alt="Large Selection of Natural Supplements">
-                <figcaption>Natural Supplements</figcaption>
-            </figure>
-            <figure>
-                <img src="images/flower.jpg" alt="Large Selection of Plants and Flowers">
-                <figcaption>Garden Plants & Flowers</figcaption>
-            </figure>
-        </section>
-        <footer>
-            <ul>
-                <li>16328 Lee Hwy Gainesville, Virginia</li>
-                <li>(703) 753-2302</li>
-            </ul>
-        </footer>
-    </body>
+
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="https://www.linkedin.com/in/michael-lee-8b687911a/">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div>Job Search</div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper">
+                
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/Desk.jpg)"></div>
+                    
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/">
+                        </div>
+
+                        <div class="subtitle">Job Applications</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/Job.jpg)"></div>
+                    
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/">
+                        </div>
+
+                        <div class="subtitle">Job Interviews</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/Team.jpg)"></div>
+                    
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/">
+                        </div>
+
+                        <div class="subtitle">Job Boards</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/Work.jpg)"></div>
+                    
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/">
+                        </div>
+
+                        <div class="subtitle">Resume/Cover Letter</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body> 
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+            portfolioItem.childNodes[1].classList.add('img-darken');
+        })
+
+        portfolioItem.addEventListener('mouseout', () => {
+            portfolioItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
+</script>   
 </html>
